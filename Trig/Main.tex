@@ -1,0 +1,113 @@
+\documentclass[a4paper, 12pt]{article}
+
+
+\usepackage{xcolor, sectsty}
+\definecolor{dark-red}{RGB}{139, 0, 0}
+\definecolor{firebrick}{RGB}{178, 34, 34}
+\definecolor{crimson}{RGB}{220, 20, 60}
+\definecolor{background}{RGB}{236, 231, 238}
+\definecolor{text}{RGB}{2, 4, 18}
+\definecolor{darkblue}{RGB}{22, 22, 138}
+
+\sectionfont{\huge\color{crimson}}
+\subsectionfont{\LARGE\color{firebrick}}
+\pagecolor{background}
+
+\renewcommand{\thesection}{\large\Roman{section})}
+\renewcommand{\thesubsection}{\Large\arabic{section}°)}
+\renewcommand{\Large}{\color{text}}
+\renewcommand{\textbf}{\color{crimson}}
+\renewcommand{\theenumi}{\color{crimson}\Roman{enumi}}
+
+\title{\color{dark-red}\huge\textbf{Formules de trigonométrie}}
+\date{15-10-2022}
+\author{Quentin RIGGI}
+\pagenumbering{Roman}
+
+\usepackage{geometry, amssymb, amsmath, scalerel, hyperref, multirow, mathtools, marginnote}
+\geometry{a4paper, total={171mm,257mm}, left=20mm, top=20mm}
+
+\begin{document}
+	\maketitle
+	\section{Addition}
+	\vspace{-1cm}
+	\begin{center}
+		\item \subsection*{Propriétés}
+	
+		\vspace{-0.4cm}
+
+		\normalsize\begin{gather*}
+			\begin{split}
+				\forall (a, b)\in\mathbb{R}^2:\;&cos\left(a+b\right) = \cos{a}\times\cos{b} - \sin{a}\times\sin{b}\\
+				&cos\left(a-b\right) = \cos{a}\times\cos{b} + \sin{a}\times\sin{b}\\
+				&sin\left(a+b\right) = \sin{a}\times\cos{b} + \sin{b}\times\cos{a}\\
+				&sin\left(a-b\right) = \sin{a}\times\cos{b} - \sin{b}\times\cos{a}\\
+				\\
+				a+b\neq\;\frac{\pi}{2}+k\pi/k\in\mathbb{Z}\\
+				tan\left(a+b\right) =&\, \frac{sin\left(a+b\right)}{cos\left(a+b\right)} = \frac{\sin{a}\times\cos{b}+\sin{b}\times\cos{a}}{\cos{a}\times\cos{b}-\sin{a}\times\sin{b}}\\
+				=&\, \frac{\cos{a}\times\cos{b}\times\left(\frac{\sin{a}\times\cos{b}}{\cos{a}\times\cos{b}}+\frac{\sin{b}\times\cos{a}}{\cos{a}\times\cos{b}}\right)}{\cos{a}\times\cos{b}\times\left(\frac{\cos{a}\times\cos{b}}{\cos{a}\times\cos{b}}-\frac{\sin{a}\times\sin{b}}{\cos{a}\times\cos{b}}\right)}\\
+				=&\,\frac{\tan{a}+\tan{b}}{1-\tan{a}\times\tan{b}}\\
+			\end{split}
+		\end{gather*}
+
+		\vspace{0.2cm}
+
+		\item \subsection*{Duplication}
+		\vspace{-0.4cm}
+		\begin{gather*}
+			\begin{split}
+				x &= a = b\\
+				\cos{2x} &= \cos^2{x}-\sin^2{x}\\
+				&= 1 - 2\times\sin^2{x}\\
+				&= 2\times\cos^2{x} - 1\\
+				\\
+				\sin{2x} &= 2\times\sin{x}\times\cos{x}\\
+				\\
+				\tan{2x} &= \frac{2\times\tan{x}}{1-\tan^2{x}}
+			\end{split}
+		\end{gather*}
+	\end{center}
+	
+	\vspace{2cm}
+	\section{Produit vers la somme}
+	\vspace{-0.4cm}
+	\begin{gather*}
+		\begin{split}
+			\cos{a}\times\cos{b} &= \frac{1}{2}\times\left[cos\left(a+b\right) + cos\left(a-b\right)\right]\\
+			\sin{a}\times\sin{b} &= \frac{1}{2}\times\left[cos\left(a+b\right) - cos\left(a-b\right)\right]\\
+			\sin{a}\times\cos{b} &= \frac{1}{2}\times\left[sin\left(a+b\right) + sin\left(a-b\right)\right]\\
+			\\
+			\cos^2{x} &= \frac{\cos{2x}+1}{2}\\
+			\sin^2{x} &= \frac{1-\cos{2x}}{2}
+		\end{split}
+	\end{gather*}
+
+	\vspace{0.5cm}
+	\section{Somme vers le produit}
+	\begin{gather*}
+		\begin{split}
+			On\;pose:&
+			\begin{cases}
+				p = a + b\\
+				q = a - b	
+			\end{cases}
+			\Leftrightarrow
+			\begin{cases}
+				a = \frac{p+q}{2}\\
+				b = \frac{p-q}{2}
+			\end{cases}
+			\\\\
+			\cos{p}+\cos{q} &= 2\times\cos{\frac{p+q}{2}}\times\cos{\frac{p-q}{2}}\\
+			\cos{p}-\cos{q} &= 2\times\sin{\frac{p+q}{2}}\times\sin{\frac{p-q}{2}}\\
+			\sin{p}+\sin{q} &= 2\times\sin{\frac{p+q}{2}}\times\cos{\frac{p-q}{2}}
+		\end{split}
+	\end{gather*}
+
+	\newpage
+	\section{Résolution d'équation trigonométrique}
+	\begin{center}
+		\begin{split}
+			
+		\end{split}
+	\end{center}
+\end{document}
