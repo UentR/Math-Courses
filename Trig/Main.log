@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.10.14)  15 OCT 2022 22:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.10.14)  15 OCT 2022 23:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -403,8 +403,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (22.01752pt too wide) in paragraph at lines 107--107
-[]\OT1/cmr/bx/n/24.88 R^^Sesolution d'^^Sequation trigonom^^Setrique 
+Overfull \hbox (44.09857pt too wide) in paragraph at lines 107--107
+[]\OT1/cmr/bx/n/24.88 R^^Sesolution d'^^Sequations trigonom^^Setriques 
  []
 
 
@@ -414,7 +414,7 @@ Overfull \hbox (21.5579pt too wide) detected at line 128
 
 [3] (/home/quentin/Programmation/LaTeX/First/Trig/Main.aux)
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: DF85AD369F9442DF71CADD3D51F58F74;236.
+(rerunfilecheck)             Checksum: 1C68DDA49BB9ABB1AD356779F1EE1C78;238.
  ) 
 Here is how much of TeX's memory you used:
  8361 strings out of 479304
@@ -425,7 +425,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  83i,26n,88p,352b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /home/quentin/Programmation/LaTeX/First/Trig/Main.pdf (3 pages, 103183 bytes).
+Output written on /home/quentin/Programmation/LaTeX/First/Trig/Main.pdf (3 pages, 103186 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream
