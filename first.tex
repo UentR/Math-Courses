@@ -2,7 +2,7 @@
 
 
 \usepackage{xcolor, sectsty}
-\definecolor{darkred}{RGB}{139, 0, 0}
+\definecolor{dark-red}{RGB}{139, 0, 0}
 \definecolor{firebrick}{RGB}{178, 34, 34}
 \definecolor{crimson}{RGB}{220, 20, 60}
 \definecolor{background}{RGB}{236, 231, 238}
@@ -19,12 +19,13 @@
 \renewcommand{\textbf}{\color{crimson}}
 \renewcommand{\theenumi}{\color{crimson}\Roman{enumi}}
 
-\title{\color{darkred}\Huge LIMITES ET CONTINUITÉ DES FONCTIONS}
+\title{\color{dark-red}\Huge LIMITES ET CONTINUITÉ DES FONCTIONS}
 \date{03-09-2022}
 \author{Quentin RIGGI}
+\pagenumbering{Roman}
 
-\usepackage{geometry, amssymb, amsmath, scalerel, hyperref, mathtools}
-\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+\usepackage{geometry, amssymb, amsmath, scalerel, hyperref, mathtools, marginnote}
+\geometry{a4paper, total={171mm,257mm}, left=30mm, right=30mm, top=30mm, bottom=20mm}
 
 \usepackage{tikz}
 \usetikzlibrary{patterns,hobby}
@@ -36,23 +37,26 @@
 	\large L'objectif est d'étudié le comportement des valeurs f(x) prisent par une fonction f aux bornes ouvertes de son domaine de définition.\\
 	\large On introduit une nouvelle notion, celle de la continuité d'une fonction, plus forte qu'être définie mais plus faible que dérivable.
 	
-	\section{Limite en l'infini et droite asymptote}
-	\large Par la suite on considere une fonction f, dont le domaine de définition Df contraint une contient une borne $+ \infty$ 
+	
+	\section{Limite en l'infini et droite asymptote}	
+	\large Par la suite on considère une fonction f, dont le domaine de définition Df contraint une contient une borne $+\infty$ 
 
-	\subsection{Limite infinie en l'infini}
+	\begin{center}
+		\subsection*{Limite infinie en l'infini}	
+	\end{center}
 	\textbf{Definition:}
 	\large On dit qu'une fonction f tend vers +$\infty$ lorsque x tend vers +$\infty$, si tout intervalle ouvert de la forme
 	$\left]A; +\infty \right[$ où $A\in\mathbb{R}$ contient toutes les valeurs f(x) prisent par la fonction f dès que x est choisi suffisamment grand.\\
 	\large On note:
 	\begin{displaymath}
-		\scaleto{\lim_{x\to+\infty} f(x) = +\infty}{20pt}
+		\scaleto{\lim_{x\to+\infty} f(x) = +\infty}{25pt}
 	\end{displaymath}
 	\\
 	\large Avec les quantificateurs:
 	\begin{gather*}
-		\scaleto{\lim_{x\to+\infty} f(x) = +\infty}{20pt} 
+		\scaleto{\lim_{x\to+\infty} f(x) = +\infty}{25pt} 
 		\\
-		\scaleto{\Leftrightarrow\forall A \in\mathbb{R}_{+}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\geq\beta\Rightarrow f\left(x\right)\geq A \right)}{20pt}
+		\scaleto{\Leftrightarrow\forall A \in\mathbb{R}_{+}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\geq\beta\Rightarrow f\left(x\right)\geq A \right)}{18pt}
 	\end{gather*}
 	
 	%Curve
@@ -83,14 +87,14 @@
 	prisent par la fonction f dès que x est choisi assez grand.\\
 	On note:
 	\begin{displaymath}
-		\scaleto{\lim_{x\to+\infty} f(x) = -\infty}{20pt}
+		\scaleto{\lim_{x\to+\infty} f(x) = -\infty}{25pt}
 	\end{displaymath}
 	\\
 	\large Avec les quantificateurs:
 	\begin{gather*}
-		\scaleto{\lim_{x\to+\infty} f(x) = -\infty}{20pt} 
+		\scaleto{\lim_{x\to+\infty} f(x) = -\infty}{25pt} 
 		\\
-		\scaleto{\Leftrightarrow\forall A \in\mathbb{R}_{-}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\geq\beta\Rightarrow f\left(x\right)\leq A \right)}{20pt}
+		\scaleto{\Leftrightarrow\forall A \in\mathbb{R}_{-}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\geq\beta\Rightarrow f\left(x\right)\leq A \right)}{18pt}
 	\end{gather*}
 
 	
@@ -98,9 +102,9 @@
 		\vspace{30pt}
 		\small On a aussi les deux autres limites:
 		\begin{gather*}
-			\scaleto{\lim_{x\to-\infty} f(x) = +\infty\Leftrightarrow\forall A \in\mathbb{R}_{+}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\leq\beta\Rightarrow f\left(x\right)\geq A \right)}{15pt}
+			\scaleto{\lim_{x\to-\infty} f(x) = +\infty\Leftrightarrow\forall A \in\mathbb{R}_{+}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\leq\beta\Rightarrow f\left(x\right)\geq A \right)}{18pt}
 			\\
-			\scaleto{\lim_{x\to-\infty} f(x) = -\infty\Leftrightarrow\forall A \in\mathbb{R}_{-}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\leq\beta\Rightarrow f\left(x\right)\leq A \right)}{15pt}
+			\scaleto{\lim_{x\to-\infty} f(x) = -\infty\Leftrightarrow\forall A \in\mathbb{R}_{-}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\leq\beta\Rightarrow f\left(x\right)\leq A \right)}{18pt}
 		\end{gather*}
 	\end{center}
 
@@ -115,7 +119,7 @@
 		\\ \color{text} \scaleto{\nexists\lim_{x\to\pm\infty}\sin{x}}{20pt}
 	\end{gather}
 
-	\medskip
+	\bigskip
 	\textbf{\color{darkblue} Exemple:}\\
 	\large La fonction x $\mapsto x^{2}$ est définie sur $\mathbb{R}$\\
 	Soit A$\in\mathbb{R}_{+}^{*}$, on cherche un réel $\beta$ tel que:
@@ -129,4 +133,74 @@
 			\forall A\in\mathbb{R}_{+}^{*}, \exists\beta&=\sqrt{A}\in\mathbb{R}_{+}^{*}, \forall x\in\mathbb{R}: x\geq\beta\Rightarrow f(x)\geq A
 		\end{split}
 	\end{gather*}
+
+
+	\newpage
+	\begin{center}
+		\subsection*{Limites finie en l'infini et asymptote horizontale}
+	\end{center}
+	\textbf{Définition:}
+	\large Soit l un nombre réel.\\
+	On dit que la fonction f tend vers l, lorsque x tend vers +$\infty$ fi tout intervalle ouvert contenant
+	l contient toutes les valeurs f(x) prisent par la fonction f dès que x est choisi suffisamment grand.\\
+	On note:
+	\begin{displaymath}
+		\scaleto{\lim_{x\to+\infty}f(x)=l}{22pt}\\
+		\scaleto{\Leftrightarrow\exists l\in\mathbb{R},\forall\varepsilon\in\mathbb{R}_{+}^{*},\exists x\in D_{f}: x\geq\beta\Rightarrow\lvert f(x)-l\lvert\leq\varepsilon}{16pt}
+	\end{displaymath}
+
+	
+	\textbf{Remarque :}
+	\begin{enumerate}
+		\item \large Graphiquement, cette définition signifie que dans un repère orthogonal la courbe $C_{f}$ représentative de la fonction f admet une asymptote horizontale d'équation y = l au voisinage de +$\infty$
+		\item \large On défini de même l'asymptote horizontale au voisinage de -$\infty$
+		\item \large Si la limite de f(x) quand x tend vers $+\infty$ vaut l on dit simplement que $C_{f}$ admet une asymptote horizontale d'équation y = l au voisinage de l'infini $\left(-\infty, +\infty\right)$
+	\end{enumerate}
+	
+	\bigskip
+	\textbf{\color{darkblue}Exemple:}
+	\large Soit f la fonction définie par f(x) = 2 - $\frac{5}{x^2}$\\
+	Montrez qu'il existe un réel $x_0$ tel que x $>$ $x_0 \Rightarrow$ 1,95 $<$ f(x) $<$ 2,05\\
+	\newline
+	$D_f$ = $\mathbb{R}^*$
+	\begin{gather*}
+		\begin{split}
+			\shortintertext{$\forall$ x$\in$$D_f$}
+			1,95 < f(x) < 2,05 &\Leftrightarrow -0,05 < f(x) - 2 < 0,05\\
+			&\Leftrightarrow-0,05 < \frac{-5}{x^2} < 0,05^1
+			\marginnote{\normalsize $^1$On pose:\\$\varepsilon$ = 5$\times10^{-2}$}
+			\\
+			&\Leftrightarrow-0,01 < \frac{1}{x^2} < 0,01\\
+			&\Leftrightarrow -10^{-2} < \frac{1}{x^2}< 10^{-2}\\
+			&\Leftrightarrow
+			\begin{cases}
+				-10^{-2} < \frac{1}{x^2}, \forall x\in\mathbb{R}^*\\
+				\frac{1}{x^2} < 10^{-2}
+			\end{cases}
+			\\
+			\frac{1}{x^2} < 10^{-2}&\Leftrightarrow x^2 > 10^2\\
+			&\Leftrightarrow\lvert x\rvert > 10\\
+			&\Leftrightarrow x\in \left]-\infty; -10\right] \cup \left[10; +\infty\right[\\
+			\shortintertext{En posant $x_0$ = 10}
+			\forall\varepsilon\in\mathbb{R}_{+}^{*},\exists x_0=10\in\mathbb{R},\forall x\in\mathbb{R}^*: x>x_0 &\Leftrightarrow 1,95 < f(x) < 2,05\\
+			&\Leftrightarrow\lvert f(x) - 2\rvert < \varepsilon
+		\end{split}
+	\end{gather*}
+
+	\textbf{Graph:}
+	\large Dans un repère (O, $\vec{i}$, $\vec{j}$), la courbe $C_f$ admet la droite d'équation y = 2 pour asymptote horizontale au voisinage de +$\infty$.
+	\vspace{0.8cm}
+	
+	\textbf{Propriétés:}
+	\begin{gather}
+		\color{text} \scaleto{\forall n\in\mathbb{N}^*\lim_{x\to\pm\infty}\frac{1}{x^n}=0}{25pt}\\
+		\color{text} \scaleto{\lim_{x\to-\infty}\exp{x}=0}{20pt}
+	\end{gather}
+	\newpage
+
+	\begin{center}
+		\subsection*{Asymptote oblique}
+	\end{center}
+
+	
 \end{document}
