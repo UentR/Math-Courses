@@ -7,7 +7,7 @@
 \definecolor{crimson}{RGB}{220, 20, 60}
 \definecolor{background}{RGB}{236, 231, 238}
 \definecolor{text}{RGB}{2, 4, 18}
-\definecolor{darkblue}{RGB}{11, 11, 69}
+\definecolor{darkblue}{RGB}{22, 22, 138}
 
 \sectionfont{\huge\color{crimson}}
 \subsectionfont{\LARGE\color{firebrick}}
@@ -23,7 +23,7 @@
 \date{03-09-2022}
 \author{Quentin RIGGI}
 
-\usepackage{geometry, amssymb, amsmath, scalerel, hyperref}
+\usepackage{geometry, amssymb, amsmath, scalerel, hyperref, mathtools}
 \geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
 
 \usepackage{tikz}
@@ -119,7 +119,14 @@
 	\textbf{\color{darkblue} Exemple:}\\
 	\large La fonction x $\mapsto x^{2}$ est définie sur $\mathbb{R}$\\
 	Soit A$\in\mathbb{R}_{+}^{*}$, on cherche un réel $\beta$ tel que:
-	\[ x\geq\beta\Rightarrow x^{2}\geq A\]
-	Soit: 
-	\ref{xn}
-	\end{document}
+	\begin{gather*}
+		\begin{split}
+			x\geq\beta&\Rightarrow x^{2}\geq A
+			\shortintertext{Soit:} 
+			x^{2}\geq A &\Leftrightarrow\lvert x\rvert\sqrt{A}\\
+			&\Leftrightarrow x\in\left]-\infty; -\sqrt{A}\right]\cup\left[\sqrt{A}; +\infty\right[\\
+			\shortintertext{On pose $\beta$ = $\sqrt{A}$}
+			\forall A\in\mathbb{R}_{+}^{*}, \exists\beta&=\sqrt{A}\in\mathbb{R}_{+}^{*}, \forall x\in\mathbb{R}: x\geq\beta\Rightarrow f(x)\geq A
+		\end{split}
+	\end{gather*}
+\end{document}
