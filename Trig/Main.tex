@@ -105,9 +105,26 @@
 
 	\newpage
 	\section{Résolution d'équation trigonométrique}
-	\begin{center}
+	\begin{gather*}
 		\begin{split}
-			
+			\forall \left( \alpha,\beta,\omega \right) \in\mathbb{R}^3, \left( \alpha,\beta \right) &\neq \left( 0,0 \right) \\
+			\left[E\right]\Leftrightarrow\alpha\times\cos{x} + \beta\times\sin{x} = \omega &\Leftrightarrow \frac{\alpha}{\sqrt{\alpha^2+\beta^2}}\times\cos{x} + \frac{\beta}{\sqrt{\alpha^2+\beta^2}} = \frac{\omega}{\sqrt{\alpha^2+\beta^2}}\\
+			\\
+			\forall\left(\alpha,\beta\right)\in\mathbb{R}^2, \left(\alpha, \beta\right)\neq\left(0,0\right):&\frac{\alpha}{\sqrt{\alpha^2+\beta^2}}\in\left[-1; 1\right]\wedge\frac{\beta}{\sqrt{\alpha^2+\beta^2}}\in\left[-1; 1\right]\\
+			&\exists\varPhi\in\mathbb{R}:
+			\begin{cases}
+				\cos{\varPhi} = \frac{\alpha}{\sqrt{\alpha^2+\beta^2}}\\
+				\sin{\varPhi} = \frac{\beta}{\sqrt{\alpha^2+\beta^2}}
+			\end{cases}\\
+			\\
+			\left[E\right]&\Leftrightarrow\cos{\varPhi}\times\cos{x} + \sin{\varPhi}\times\sin{x} = \frac{\omega}{\sqrt{\alpha^2+\beta^2}}\\
+			&\Leftrightarrow cos\left(x-\varPhi\right) = \frac{\omega}{\sqrt{\alpha^2+\beta^2}}\\
+			&\Leftrightarrow
+			\begin{cases}
+				\forall\omega\notin\left[-1; 1\right]: cos\left(x-\varPhi\right) \neq \frac{\omega}{\sqrt{\alpha^2+\beta^2}}\\
+				\forall\omega\in\left[-1; 1\right], \exists\theta\in\mathbb{R}: \cos{\theta} = \frac{\omega}{\sqrt{\alpha^2+\beta^2}}\wedge cos\left(x-\varPhi\right) = \cos{\theta}
+			\end{cases}
 		\end{split}
-	\end{center}
+	\end{gather*}
+
 \end{document}
