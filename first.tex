@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 10pt]{article}
 
 
 \usepackage{xcolor, sectsty}
@@ -7,21 +7,29 @@
 \definecolor{crimson}{RGB}{220, 20, 60}
 \definecolor{background}{RGB}{236, 231, 238}
 \definecolor{text}{RGB}{2, 4, 18}
+\definecolor{darkblue}{RGB}{11, 11, 69}
 
 \sectionfont{\huge\color{crimson}}
 \subsectionfont{\LARGE\color{firebrick}}
 \pagecolor{background}
 
-\renewcommand\thesection{\huge\Roman{section})}
-\renewcommand\thesubsection{\LARGE\arabic{section}°)}
-\renewcommand\large{\color{text}}
+\renewcommand{\thesection}{\huge\Roman{section})}
+\renewcommand{\thesubsection}{\LARGE\arabic{section}°)}
+\renewcommand{\large}{\color{text}}
+\renewcommand{\textbf}{\color{crimson}}
+\renewcommand{\theenumi}{\color{crimson}\Roman{enumi}}
 
 \title{\color{darkred}\Huge LIMITES ET CONTINUITÉ DES FONCTIONS}
 \date{03-09-2022}
 \author{Quentin RIGGI}
 
-\usepackage{geometry, amssymb, amsmath, scalerel}
+\usepackage{geometry, amssymb, amsmath, scalerel, hyperref}
 \geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+
+\usepackage{tikz}
+\usetikzlibrary{patterns,hobby}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.6}
 
 \begin{document}
 	\maketitle
@@ -32,16 +40,86 @@
 	\large Par la suite on considere une fonction f, dont le domaine de définition Df contraint une contient une borne $+ \infty$ 
 
 	\subsection{Limite infinie en l'infini}
-	\textbf{\color{crimson}Definition:}
+	\textbf{Definition:}
 	\large On dit qu'une fonction f tend vers +$\infty$ lorsque x tend vers +$\infty$, si tout intervalle ouvert de la forme
-	$\left]A; +\infty \right[$ où $A\in\mathbb{R}$ contient toutes les valeurs f(x) prisent par la fonction f dès que x est choisi suffisamment grand, on note:
+	$\left]A; +\infty \right[$ où $A\in\mathbb{R}$ contient toutes les valeurs f(x) prisent par la fonction f dès que x est choisi suffisamment grand.\\
+	\large On note:
 	\begin{displaymath}
-		\scaleto{\lim_{x\to\infty} f(x) = +\infty}{30pt}
+		\scaleto{\lim_{x\to+\infty} f(x) = +\infty}{20pt}
 	\end{displaymath}
 	\\
 	\large Avec les quantificateurs:
-	\begin{displaymath}
-		\scaleto{\lim_{x\to\infty} f(x) = +\infty \Leftrightarrow\forall A \in\mathbb{R}_{+}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\geq\beta\Rightarrow f\left(x\right)\geq A \right)}{25pt}
-	\end{displaymath}
+	\begin{gather*}
+		\scaleto{\lim_{x\to+\infty} f(x) = +\infty}{20pt} 
+		\\
+		\scaleto{\Leftrightarrow\forall A \in\mathbb{R}_{+}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\geq\beta\Rightarrow f\left(x\right)\geq A \right)}{20pt}
+	\end{gather*}
 	
-\end{document}
+	%Curve
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+				xmin=0,xmax=5,
+				xlabel={z},
+				ymin=0,ymax=5,
+				xtick={3},
+				xticklabels={$\beta$},
+				ytick={3},
+				yticklabels={$A$},
+				xlabel={$x$},  
+				ylabel={$y$},
+				axis lines=middle]
+				\addplot[black,thick,domain=0:5,no marks]{3};
+				\addplot +[black,thick,dashed,domain=0:5,no marks] coordinates {(3,0) (3,3)};
+			\end{axis}
+			\draw [thick] (0, 0) .. controls(0.9,5) and (3.4,1.6) .. (6.5, 5);
+		\end{tikzpicture}
+	\end{center}
+	
+	\newpage
+	\textbf{Définition:}
+	\large On dit qu'une fonction f tend vers -$\infty$ lorsque x tend vers +$\infty$
+	si tout intervalle ouvert de la forme $\left]-\infty; A\right[, A\in\mathbb{R}$, contient toutes les valeurs f(x)
+	prisent par la fonction f dès que x est choisi assez grand.\\
+	On note:
+	\begin{displaymath}
+		\scaleto{\lim_{x\to+\infty} f(x) = -\infty}{20pt}
+	\end{displaymath}
+	\\
+	\large Avec les quantificateurs:
+	\begin{gather*}
+		\scaleto{\lim_{x\to+\infty} f(x) = -\infty}{20pt} 
+		\\
+		\scaleto{\Leftrightarrow\forall A \in\mathbb{R}_{-}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\geq\beta\Rightarrow f\left(x\right)\leq A \right)}{20pt}
+	\end{gather*}
+
+	
+	\begin{center}
+		\vspace{30pt}
+		\small On a aussi les deux autres limites:
+		\begin{gather*}
+			\scaleto{\lim_{x\to-\infty} f(x) = +\infty\Leftrightarrow\forall A \in\mathbb{R}_{+}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\leq\beta\Rightarrow f\left(x\right)\geq A \right)}{15pt}
+			\\
+			\scaleto{\lim_{x\to-\infty} f(x) = -\infty\Leftrightarrow\forall A \in\mathbb{R}_{-}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\leq\beta\Rightarrow f\left(x\right)\leq A \right)}{15pt}
+		\end{gather*}
+	\end{center}
+
+	\vspace{30pt}
+	\textbf{Propriétés (Admises):}
+	\begin{gather}
+		\color{text} \scaleto{\forall n\in\mathbb{N}^{*}: \lim_{x\to+\infty}x^{n}=+\infty}{20pt} \label{xn} 
+		\\ \color{text} \scaleto{\forall n\in2\mathbb{N}, n\neq0: \lim_{x\to-\infty}x^{n}=+\infty}{20pt}
+		\\ \color{text} \scaleto{\forall n\in2\mathbb{N}+1: \lim_{x\to-\infty}x^{n}=-{\infty}}{20pt}
+		\\ \color{text} \scaleto{\lim_{x\to+\infty}\exp{x}=+\infty}{20pt}
+		\\ \color{text} \scaleto{\nexists\lim_{x\to\pm\infty}\cos{x}}{20pt} 
+		\\ \color{text} \scaleto{\nexists\lim_{x\to\pm\infty}\sin{x}}{20pt}
+	\end{gather}
+
+	\medskip
+	\textbf{\color{darkblue} Exemple:}\\
+	\large La fonction x $\mapsto x^{2}$ est définie sur $\mathbb{R}$\\
+	Soit A$\in\mathbb{R}_{+}^{*}$, on cherche un réel $\beta$ tel que:
+	\[ x\geq\beta\Rightarrow x^{2}\geq A\]
+	Soit: 
+	\ref{xn}
+	\end{document}
