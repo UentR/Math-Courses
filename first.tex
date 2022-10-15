@@ -1,4 +1,5 @@
-\documentclass{article}
+\documentclass[a4paper, 12pt]{article}
+
 
 \usepackage{xcolor, sectsty}
 \definecolor{darkred}{RGB}{139, 0, 0}
@@ -19,8 +20,8 @@
 \date{03-09-2022}
 \author{Quentin RIGGI}
 
-\usepackage{geometry, amssymb, amsmath}
-\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm,}
+\usepackage{geometry, amssymb, amsmath, scalerel}
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
 
 \begin{document}
 	\maketitle
@@ -28,13 +29,19 @@
 	\large On introduit une nouvelle notion, celle de la continuité d'une fonction, plus forte qu'être définie mais plus faible que dérivable.
 	
 	\section{Limite en l'infini et droite asymptote}
-	\paragraph{} \large Par la suite on considere une fonction f, dont le domaine de définition Df contraint une contient une borne $+ \infty$ 
+	\large Par la suite on considere une fonction f, dont le domaine de définition Df contraint une contient une borne $+ \infty$ 
 
 	\subsection{Limite infinie en l'infini}
-	\textbf{\color{crimson}Definition:} On dit qu'une fonction f tend vers +$\infty$ lorsque x tend vers +$\infty$, si tout intervalle ouvert de la forme
-	$\left]A; +\infty \right[$ où $A\in\mathbb{R}$ contient toutes les valeurs f(x) prisent par la fonction f dès que x est choisi suffisamment grnad, on note:\\
-	\begin{center}
-		\Large $\lim_{x \to \infty}$ f(x) = +$\infty$
-	\end{center}
+	\textbf{\color{crimson}Definition:}
+	\large On dit qu'une fonction f tend vers +$\infty$ lorsque x tend vers +$\infty$, si tout intervalle ouvert de la forme
+	$\left]A; +\infty \right[$ où $A\in\mathbb{R}$ contient toutes les valeurs f(x) prisent par la fonction f dès que x est choisi suffisamment grand, on note:
+	\begin{displaymath}
+		\scaleto{\lim_{x\to\infty} f(x) = +\infty}{30pt}
+	\end{displaymath}
+	\\
+	\large Avec les quantificateurs:
+	\begin{displaymath}
+		\scaleto{\lim_{x\to\infty} f(x) = +\infty \Leftrightarrow\forall A \in\mathbb{R}_{+}^{*},\exists\beta\in\mathbb{R}_{+}^{*},\forall x \in D_{f} : \left(x\geq\beta\Rightarrow f\left(x\right)\geq A \right)}{25pt}
+	\end{displaymath}
 	
 \end{document}
