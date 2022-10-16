@@ -1,8 +1,2 @@
-# Math Courses
-Une version pdf de cours en math
-
-# Utilisation
-Vous pouvez sélectionner le thème de votre choix et ouvrir Main.pdf pour voir le cours correspondant
-
-# Participation
-Tout retour est le bienvenu. Vous pouvez ouvrir une issue pour discuter du moindre problème 
+# Work In Progress
+This branch isn't for working on math but to make sure that the main branch stay clean
